@@ -32,6 +32,7 @@ section{
         grid-column-gap: 24px;
         margin-left: 50px;
         margin-top: 30px;
+        margin-right: 10px;
     }
   .product .product-banner img{
       height: 104px;
@@ -60,3 +61,55 @@ section{
       width: 100%;
       margin-top: 10px;
   }
+  /*---------
+   media query
+   ----------- */
+   /* mobile devices */
+   @media only screen and (max-width: 688px) {
+       .first-part{
+           grid-template-columns: repeat(1, 1fr);
+           display: list-item;
+       }
+       .container{
+           flex-direction: column;
+           width: 100%;
+           display: list-item;
+           grid-template-columns: repeat(1, 1fr);
+       }
+       .products{
+        grid-template-columns: repeat(1, 1fr);
+       }
+       .product{
+           flex-direction: column;
+       }
+       .Third{
+           width: 100%;
+           flex-direction: column;
+           grid-template-columns: repeat(1, 1fr);
+       }
+   }
+   /* tablet devices  */
+   @media only screen and (min-width: 688px) and (max-width: 992px) {
+       .first-part{
+           width: 100%;
+       }
+       .container{
+        flex-direction: column;
+        width: 100%;
+        display: list-item;
+        grid-template-columns: repeat(2, 1fr);
+       }
+       .Third{
+           width: 100%;
+           flex-direction: column;
+           grid-template-columns: repeat(2, 1fr);
+       }
+       .products{
+           grid-template-columns: repeat(2, 1fr);
+           flex-direction: column;
+       }
+       .product{
+           flex-direction: column;
+       }
+       
+   }
